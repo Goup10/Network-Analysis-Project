@@ -5,11 +5,13 @@ from tweepy import Stream
 from time import sleep
 import time
 
-#Variables that contains the user credentials to access Twitter API
-access_token = "980431212350238720-7SwVvcqmFZBBt7NYMRCEicgQ50rcFw9"
-access_token_secret = "8us1aIfKzlcJ5vDmq7XKWqy7fijKB5Jx8N9UzXslrQshF"
-consumer_key = "UpKh3aM48Xm0SbZZaz7CoAxtP"
-consumer_secret = "PS7boO4EOSLz7aUlUWluMSyNWDJ3EVEyLaS7xBXemq5NY2Y3gi"
+#Variables that contain the user credentials to access Twitter API
+#All following tokens have been removed as a protection of my privacy
+#You can create your own tokens at: https://apps.twitter.com/ 
+access_token = ""
+access_token_secret = ""
+consumer_key = ""
+consumer_secret = ""
 
 
 class StdOutListener(StreamListener):
@@ -19,7 +21,7 @@ class StdOutListener(StreamListener):
     def on_data(self, data):
         try:
             print(data)
-            saveFile = open('newtweets.csv', 'a')
+            saveFile = open('newtweets.txt', 'a')
             saveFile.write(data)
             saveFile.close()
             return True
